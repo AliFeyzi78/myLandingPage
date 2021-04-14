@@ -1,0 +1,136 @@
+body{
+    font-family: 'Josefin Sans', sans-serif;
+    background: linear-gradient(to right, #fff, #888);
+    overflow-x: hidden;
+}
+/* 
+color-1:#fff
+color-2:#888
+*/
+.header{
+    display: grid;
+    grid-template-columns: 20% 1fr;
+    align-content: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+.header-logo{
+    align-self: center;
+    /* justify-self: center; */
+    margin-left: 2rem;
+}
+#logo{
+    transition: all 0.5s ease-out;
+}
+#logo:hover{
+    transform: 
+    perspective(400px) 
+    translate3d(-10px, 0px, -10px)
+    scale(0.91);
+}
+.header-letter{
+    font-size: 25px;
+    color:red;
+
+}
+/* .heading{
+    display:grid;
+    grid-template-columns:50% 2fr;
+} */
+.menu{
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
+    list-style: none;
+    position: relative;
+}
+.menu-item{
+    margin: 0 45px;
+}
+
+.menu-item::after{
+    content: "";
+    display: block;
+    width: 100%; 
+    height: 3px;
+    background-color: #3a4b;
+    position: absolute;
+    visibility: hidden;
+    transform-origin: right;
+    transform:scale(0);
+    transition:0.25s ease-out;
+}
+.menu-item:hover:after{
+    visibility: visible;
+    transform: scale(1);
+}
+.menu-item:last-of-type{
+    color: tomato;
+    border-bottom: 2px salmon solid;
+}
+.container{
+    max-width: 1500px;
+}
+.para{
+    margin: 10px;
+    padding: 5px;
+    font-size: large;
+}
+.appointment_button{
+    color: white;
+    width: 200px;
+    height: 44px;
+    position: absolute;
+    bottom: -190px;
+    cursor: pointer;
+    border: none;
+    box-shadow: rgb(255,168,145, 0.1) 0px 5px 10px;
+    background-color: springgreen;
+    font-size:20px;
+    text-align: center;
+    margin-bottom: 25px;
+    transition: all 0.8s cubic-bezier(0.175, 0.82, 0.165, 1);
+}
+.appointment_button:hover{
+    transform: translateY(-3px);
+    opacity: 0.85;
+}
+main{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 1rem;
+}
+.card{
+    width: 300px;
+    height: 310px;
+    border-radius: 20px;
+    background-color: chocolate;
+    background: linear-gradient(to left, #ddefee, #aabbcc);
+    padding: 1rem;
+    transition: all 1s cubic-bezier(0.2, 0.82, 0.2, 1) 0.1s;
+}
+.card:nth-child(even){
+    background: linear-gradient(to right, #11ccee, #aabbcc);
+} 
+h3{
+    font-size: 45px;
+    margin: 0;
+}
+p{
+    padding: 3px;
+    font-size: 22px;
+    line-height: 1.2;
+    font-family: Lato;
+}
+.scale:hover{
+    transform: scale(0.8);
+}
+.skew:hover{
+    transform: skewY(-10deg);
+}
+.rotate:hover{
+    transform:rotateY(90deg);
+}
+.translate:hover{
+    transform: translateY(25px) rotateY(55deg) skewY(10deg);
+}
